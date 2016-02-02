@@ -11,7 +11,8 @@
 #include "Node.h"
 template <class Type>
 
-class ArrayNode : public Node<Type>
+class ArrayNode : public Node<Type> : Node<Type>()
+
 {
 private:
 	ArrayNode*next;
