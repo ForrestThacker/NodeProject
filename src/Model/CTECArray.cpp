@@ -34,8 +34,21 @@ CTECArray<Type>::~CTECArray()
 }
 
 template<class Type>
-void CTECArray<Type>::set(int position, cost Type& value)
+void CTECArray<Type>::set(int position, const Type& value)
 {
+	assert(position < size && position >= 0);
+	ArrayNode<Type> * current = head;
+	for (int spot = 0; spot <= position; spot++)
+	{
+		if (spot != position)
+		{
+			current = current->getNext();
+		}
+		else
+		{
+			return current-setValue(value);
+		}
+	}
 }
 
 
