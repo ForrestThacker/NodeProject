@@ -10,6 +10,7 @@
 
 #include "ArrayNode.h"
 
+template <class Type>
 class CTECArray
 {
 private:

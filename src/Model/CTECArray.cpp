@@ -6,20 +6,55 @@
  */
 
 #include "CTECArray.h"
+
+#include <assert.h>
+
 using namespace std;
 
-template<class Type>
 CTECArray<Type>::CTECArray(int size)
+
+
+template<class Type>
+CTECArray<Type>::~CTECArray()
 {
-	this->size = size;
-	this->head = nullptr;
-	// TODO Auto-generated constructor stub
-	if(size <= 0)
+	ArrayNode<Type> * deleteMe = head;
+	for (int index = 0; index < size; index++)
 	{
-		cerr << "That is not allowed!" << endl;
+		if(deleteMe->getNext() != nullptr)
+		{
+			head = deleteMe->getNext();
+			deleteMe->setNext(nullptr);
+		}
+
+		delete deleteMe;
+		deleteMe = head;
+
 	}
+	delete head;
 }
 
-CTECArray::~CTECArray() {
-	// TODO Auto-generated destructor stub
+template<class Type>
+void CTECArray<Type>::set(int position, cost Type& value)
+{
+}
+
+
+template<class Type>
+Type CTECArray<Type>::get(int position)
+{
+assert(position < size && position >= 0);
+
+ArrayNode<Type> * current = head;
+for (int spot = 0; spot <= position; spot++)
+{
+	if (spot != position)
+	{
+		current = current->getNext();
+	}
+	else
+	{
+		return current-getValue();
+	}
+
+}
 
