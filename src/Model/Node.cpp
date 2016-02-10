@@ -5,6 +5,12 @@
  *      Author: ftha4681
  */
 
+#include "Node.h"
 
+Node<Type::Node()
+
+Node<Type>::Node(const Type& value)
+
+Node<
 
 

@@ -19,6 +19,7 @@ private:
 
 public:
 	ArrayNode();
+	Array
 	virtual ~ArrayNode();
 };
 
