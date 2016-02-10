@@ -9,18 +9,19 @@
 #define MODEL_ARRAYNODE_H_
 
 #include "Node.h"
+
 template <class Type>
-
-class ArrayNode : public Node<Type> : Node<Type>()
-
+class ArrayNode : public Node<Type>
 {
 private:
 	ArrayNode*next;
-
 public:
 	ArrayNode();
-	Array
+	ArrayNode(const Type& value);
+	ArrayNode(const Type& value, ArrayNode * next);
 	virtual ~ArrayNode();
+	void setNext(ArrayNode* next);
+	ArrayNode* getNext();
 };
 
 

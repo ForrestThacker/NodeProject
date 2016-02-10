@@ -11,8 +11,31 @@
 
 using namespace std;
 
+template<class Type>
 CTECArray<Type>::CTECArray(int size)
+{
+	this->size = size;
+	this->head = nullptr;
 
+	//Defensive code
+	assert(size>0);
+
+	for(int index = 0; index < size; index++)
+	{
+		if (head != nullptr)
+		{
+			//Regular ArrayNodes are being made.
+			ArrayNode<Type> * nextNode = new ArrayNode<Type>();
+			nextNode->setNext(head);
+			this->head = nextNode;
+		}
+		else
+		{	//The first ArrayNode needs to be made.
+			ArrayNode<Type> * firstNode = new ArrayNode<Type>();
+			this->head = firstNode;
+		}
+	}
+}
 
 template<class Type>
 CTECArray<Type>::~CTECArray()
@@ -20,7 +43,7 @@ CTECArray<Type>::~CTECArray()
 	ArrayNode<Type> * deleteMe = head;
 	for (int index = 0; index < size; index++)
 	{
-		if(deleteMe->getNext() != nullptr)
+		if (deleteMe->getNext() != nullptr)
 		{
 			head = deleteMe->getNext();
 			deleteMe->setNext(nullptr);
@@ -46,28 +69,27 @@ void CTECArray<Type>::set(int position, const Type& value)
 		}
 		else
 		{
-			return current-setValue(value);
+			return current - setValue(value);
 		}
 	}
 }
 
-
-template<class Type>
+template <class Type>
 Type CTECArray<Type>::get(int position)
 {
-assert(position < size && position >= 0);
+	assert(position < size && position >= 0);
 
-ArrayNode<Type> * current = head;
-for (int spot = 0; spot <= position; spot++)
-{
-	if (spot != position)
+	ArrayNode < Type > *current = head;
+	for (int spot = 0; spot <= position; spot++)
 	{
-		current = current->getNext();
-	}
-	else
-	{
-		return current-getValue();
-	}
+		if (spot != position)
+		{
+			current = current->getNext();
+		}
+		else
+		{
+			return current -> getValue();
+		}
 
+	}
 }
-

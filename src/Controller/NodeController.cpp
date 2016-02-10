@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 #include "NodeController.h"
 #include <iostream>
 
@@ -15,7 +9,7 @@ NodeController::NodeController()
 	notHipsterInts = new CTECArray<int>(5);
 }
 
-NodController::~NodeController()
+NodeController::~NodeController()
 {
 	// TODO Auto-generated destructor stub
 }
@@ -29,6 +23,6 @@ void NodeController::start()
 
 	for(int index = notHipsterInts->getSize(0-1; index >= 0; index--)
 	{
-			cout <<
+
 	}
 }

@@ -18,7 +18,7 @@ using namespace std;
 class NodeController
 {
 private:
-
+	CTECArray *notHipsterInts;
 public:
 	NodeController();
 	virtual ~NodeController();

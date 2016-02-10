@@ -11,6 +11,18 @@
 #include <iostream>
 
 template <class Type>
+class Node
+{
+public:
+	Node();
+	Node(const Type& value);
+	Type getValue();
+	void setValue(const Type& value);
+	Node* getPointers();
+private:
+	Type value;
+	Node* ptrs;
+};
 
 
 

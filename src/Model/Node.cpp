@@ -6,11 +6,16 @@
  */
 
 #include "Node.h"
-
+template <class Type>
 Node<Type::Node()
+{
 
+}
+template <class Type>
 Node<Type>::Node(const Type& value)
+{
 
-Node<
+}
+
 
 
