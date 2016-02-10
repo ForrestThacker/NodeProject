@@ -22,5 +22,4 @@ CTECArray<Type>::CTECArray(int size)
 
 CTECArray::~CTECArray() {
 	// TODO Auto-generated destructor stub
-}
 
