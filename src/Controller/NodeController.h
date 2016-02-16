@@ -19,6 +19,7 @@ class NodeController
 {
 private:
 	CTECArray *notHipsterInts;
+	Timer arrayTimer;
 public:
 	NodeController();
 	virtual ~NodeController();

@@ -11,7 +11,6 @@ template <class Type>
 ArrayNode<Type>::ArrayNode() :Node<Type>()
 {
 	this->next = nullptr;
-	this->value= value;
 }
 
 template <class Type>

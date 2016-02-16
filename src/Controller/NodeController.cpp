@@ -16,13 +16,17 @@ NodeController::~NodeController()
 
 void NodeController::start()
 {
+	arrayTimer.startTimer();
 	for(int index = 0; index < notHipsterInts->getSize(); index++)
 	{
 		notHipsterInts->set(index, (index *  23));
 	}
 
-	for(int index = notHipsterInts->getSize(0-1; index >= 0; index--)
+	for(int index = notHipsterInts->getSize()-1; index >= 0; index--)
 	{
-
+		cout << "notHipsterInts at index " << index << " contains " << notHipsterInts->get(index) << endl;
 	}
+
+	arrayTimer.stopTimer();
+	arrayTimer.displayTimerInformation();
 }

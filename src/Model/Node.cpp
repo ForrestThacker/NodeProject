@@ -7,7 +7,7 @@
 
 #include "Node.h"
 template <class Type>
-Node<Type::Node()
+Node<Type>::Node()
 {
 
 }

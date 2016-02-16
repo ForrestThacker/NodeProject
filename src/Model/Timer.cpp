@@ -30,8 +30,6 @@ void Timer::displayTimerInformation()
 
 	cout << executionTime << " us (microseconds) for the code " << endl;
 	cout << "Which is" << float(executionTime)/CLOCKS_PER_SEC<< " seconds" << endl;
-
-
 }
 
 void Timer::startTimer()
