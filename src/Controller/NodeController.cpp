@@ -17,6 +17,7 @@ NodeController::~NodeController()
 void NodeController::start()
 {
 	arrayTimer.startTimer();
+
 	for(int index = 0; index < notHipsterInts->getSize(); index++)
 	{
 		notHipsterInts->set(index, (index *  23));
