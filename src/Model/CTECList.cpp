@@ -27,7 +27,9 @@ CTECList<Type>::~CTECList()
 template<class Type>
 Type CTECList<Type> :: removeFromFront()
 {
+	assert(this->size >0);
 //Find the next spot.
+		Type thingToRemove;
 	ArrayNode<Type> * newHead = new ArrayNode<Type>();
 	newHead = this->head->getNext();
 //Remove head
