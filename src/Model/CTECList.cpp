@@ -6,7 +6,7 @@
  */
 
 #include "CTECList.h"
-
+#include <iostream>
 
 template<class Type>
 
@@ -29,9 +29,17 @@ Type CTECList<Type> :: removeFromFront()
 {
 //Find the next spot.
 	ArrayNode<Type> * newHead = new ArrayNode<Type>();
-	newHead = head->getNext();
+	newHead = this->head->getNext();
 //Remove head
-	delete head;
+	delete this-> head;
 //Move head to next spot.
 	head = newHead;
+
+	return thingToRemove;
+}
+
+template <class Type>
+Type CTECList<Type> :: removeFromEnd()
+{
+
 }
