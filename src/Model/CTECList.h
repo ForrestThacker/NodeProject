@@ -7,17 +7,31 @@
 
 #ifndef MODEL_CTECLIST_H_
 #define MODEL_CTECLIST_H_
+#include "ArrayNode.cpp"
 
-namespace CTECList
-{
-
+template <class Type>
 class CTECList
 {
+private:
+	ArrayNode<Type>*head;
+	ArrayNode<Type>*end;
+	int size;
+	void calcuateSize();
 public:
 	CTECList();
 	virtual ~CTECList();
+	Type removeFromFront();
+	Type removeFromEnd();
+	void addToFront(const Type & value);
+	void addAtIndex(int index, const Type & value);
+	Type getFront();
+	Type removeFromIndex(int index);
+	Type set(int index, const Type& value);
+	void addToEnd(const Type& value);
+	Type getFromIndex(int index);
+
 };
 
-} /* namespace CTECList */
 
 #endif /* MODEL_CTECLIST_H_ */
+4

@@ -20,6 +20,7 @@ class NodeController
 private:
 	CTECArray *notHipsterInts;
 	Timer arrayTimer;
+	void testLists();
 public:
 	NodeController();
 	virtual ~NodeController();

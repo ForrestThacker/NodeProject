@@ -25,7 +25,7 @@ void NodeController::start()
 
 	for(int index = notHipsterInts->getSize()-1; index >= 0; index--)
 	{
-		cout << "notHipsterInts at index " << index << " contains " << notHipsterInts->get(index) << endl;
+		cout << "notHipsterInts at index " << index << " contains " << notHipsterInts->get(index); << std::endl;
 	}
 
 	arrayTimer.stopTimer();
